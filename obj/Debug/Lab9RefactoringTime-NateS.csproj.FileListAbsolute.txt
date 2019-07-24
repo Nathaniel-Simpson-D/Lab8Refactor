@@ -1,0 +1,7 @@
+C:\Clabs\Lab9RefactoringTime-NateS\bin\Debug\Lab9RefactoringTime-NateS.exe.config
+C:\Clabs\Lab9RefactoringTime-NateS\bin\Debug\Lab9RefactoringTime-NateS.exe
+C:\Clabs\Lab9RefactoringTime-NateS\bin\Debug\Lab9RefactoringTime-NateS.pdb
+C:\Clabs\Lab9RefactoringTime-NateS\obj\Debug\Lab9RefactoringTime-NateS.csprojAssemblyReference.cache
+C:\Clabs\Lab9RefactoringTime-NateS\obj\Debug\Lab9RefactoringTime-NateS.csproj.CoreCompileInputs.cache
+C:\Clabs\Lab9RefactoringTime-NateS\obj\Debug\Lab9RefactoringTime-NateS.exe
+C:\Clabs\Lab9RefactoringTime-NateS\obj\Debug\Lab9RefactoringTime-NateS.pdb
