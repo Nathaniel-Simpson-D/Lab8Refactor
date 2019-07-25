@@ -28,6 +28,13 @@ namespace Lab9RefactoringTime_NateS
                 int rep2 = GetChoice("Would you like to ask about a student or add another student?(A/B)");
                 if (rep2 == 1)
                 {
+                    int i = 1;
+                    foreach (string name in alName)
+                    {
+                        Console.WriteLine($"{i}:{name} ");
+                        i++;
+                    }
+
                     int choice = GetNumChoice(alName);
                     PrintInfo(choice, alName, alHome, alFood, alColor, alAge);
                 }
@@ -67,23 +74,26 @@ namespace Lab9RefactoringTime_NateS
 
             bool isValid = int.TryParse(choice, out result);
 
-            if (isValid && result > 0 && result <= Name.Count)
-            {
-                return result - 1;
-            }
-            else
-            {
-
-                for (int i = 0; i < 10; i++)
-                {
-                    if (Name[i].ToString() == choice)
+            
+            
+            
+                if(!isValid)
+                { 
+                    for (int i = 0; i < 10; i++)
                     {
-                        return i;
+                        if (Name[i].ToString() == choice)
+                        {
+                            return i;
+                        }
                     }
+                }
+                else if(isValid && result > 0 && result <= Name.Count)
+                {
+                    return result - 1;
                 }
                 Console.WriteLine("Sorry I didn't get that!");
                 return GetNumChoice(Name);
-            }
+            
         }
         public static void PrintInfo(int i, List<string> Name, List<string> Home, List<string> Food, List<string> Color, List<string> Age)
         {
@@ -107,6 +117,7 @@ namespace Lab9RefactoringTime_NateS
             }
             bool rep = GetYesNo("Would you like more info?");
             if (rep)
+
             {
                 PrintInfo(i, Name, Home, Food, Color, Age);
             }
@@ -161,7 +172,7 @@ namespace Lab9RefactoringTime_NateS
             Console.WriteLine(message);
             string result = Console.ReadLine();
 
-            if (result != null && result != " ")
+            if (result != null && result != " " && result != "")
             {
                 return result;
             }
@@ -170,8 +181,7 @@ namespace Lab9RefactoringTime_NateS
                 return GetString("Not Valid!");
             }
         }
-           
-        
+
     }
    
 }
